@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="ClassLibrary1\**" />
+    <Compile Remove="GenerateIranianNationalCodes.MachineLearning\**" />
+    <Compile Remove="GenerateIranianNationalCodes_ML_Detection\**" />
+    <Compile Remove="NcodeMaschineLearning_ConsoleApp1\**" />
+    <Compile Remove="Utility\**" />
+    <EmbeddedResource Remove="ClassLibrary1\**" />
+    <EmbeddedResource Remove="GenerateIranianNationalCodes.MachineLearning\**" />
+    <EmbeddedResource Remove="GenerateIranianNationalCodes_ML_Detection\**" />
+    <EmbeddedResource Remove="NcodeMaschineLearning_ConsoleApp1\**" />
+    <EmbeddedResource Remove="Utility\**" />
+    <None Remove="ClassLibrary1\**" />
+    <None Remove="GenerateIranianNationalCodes.MachineLearning\**" />
+    <None Remove="GenerateIranianNationalCodes_ML_Detection\**" />
+    <None Remove="NcodeMaschineLearning_ConsoleApp1\**" />
+    <None Remove="Utility\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ML" Version="1.6.0" />
+    <PackageReference Include="Microsoft.ML.FastTree" Version="1.6.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GenerateIranianNationalCodes.Utility\GenerateIranianNationalCodes.Utility.csproj" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32319.34
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenerateIranianNationalCodes", "GenerateIranianNationalCodes\GenerateIranianNationalCodes.csproj", "{BF92834E-2F5F-436A-A5FD-F55E993AAD55}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenerateIranianNationalCodes.MachineLearning", "GenerateIranianNationalCodes.MachineLearning\GenerateIranianNationalCodes.MachineLearning.csproj", "{E328998A-47ED-488E-B254-14CFAFB7CCF6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenerateIranianNationalCodes.Utility", "GenerateIranianNationalCodes.Utility\GenerateIranianNationalCodes.Utility.csproj", "{3C4CAB84-B262-49BB-98A1-1B1ACAC01B0E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenerateIranianNationalCodes_ML_Detection", "GenerateIranianNationalCodes_ML_Detection\GenerateIranianNationalCodes_ML_Detection.csproj", "{D44103C9-FE98-4476-8FBC-7D3F8CAF8A38}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BF92834E-2F5F-436A-A5FD-F55E993AAD55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF92834E-2F5F-436A-A5FD-F55E993AAD55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF92834E-2F5F-436A-A5FD-F55E993AAD55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF92834E-2F5F-436A-A5FD-F55E993AAD55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E328998A-47ED-488E-B254-14CFAFB7CCF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E328998A-47ED-488E-B254-14CFAFB7CCF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E328998A-47ED-488E-B254-14CFAFB7CCF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E328998A-47ED-488E-B254-14CFAFB7CCF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C4CAB84-B262-49BB-98A1-1B1ACAC01B0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C4CAB84-B262-49BB-98A1-1B1ACAC01B0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C4CAB84-B262-49BB-98A1-1B1ACAC01B0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C4CAB84-B262-49BB-98A1-1B1ACAC01B0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D44103C9-FE98-4476-8FBC-7D3F8CAF8A38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D44103C9-FE98-4476-8FBC-7D3F8CAF8A38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D44103C9-FE98-4476-8FBC-7D3F8CAF8A38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D44103C9-FE98-4476-8FBC-7D3F8CAF8A38}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9791CBD6-8BAE-4E83-B958-2B59C72DF0B5}
+	EndGlobalSection
+EndGlobal
