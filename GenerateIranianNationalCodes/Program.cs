@@ -1,5 +1,6 @@
 ﻿using GenerateIranianNationalCodes.Utility;
 using static Utility;
+//---------------3 precodes-------------------
 List<string> Tehran_preCodes = new()
 {
     CityNationalCodes_تهران.Tehran_001,
@@ -20,12 +21,22 @@ List<string> shiraz_preCodes = new List<string>() { "228", "229", "230" };
 //--------set limitation for generate of ncodes-------------
 int limitation = 400;
 
+//---------StreamWriter------------
 StreamWriter file = new(@"D:\IranianNationalCodes\GenerateIranianNationalCodes\Data\TotalCodes.txt");
+
+
 //-----make dataset of precode per city and state------------
 var data = CreativeDataSet.Create();
 Console.ForegroundColor = ConsoleColor.Blue;
+
+
+
 //---------add Header to dataset--------------------------------
 AddHeaderToFile(file);
+
+
+
+
 //-------------write global dataset to files----------------------
 //foreach (var state in data)
 //    foreach (var precode in state.cityPreCodes)
@@ -52,6 +63,10 @@ AddHeaderToFile(file);
 //    PrintAllCodesByCityCode(item, "karaj", file, (int)limitation /Karaj_preCodes.Count);
 //}
 //Console.WriteLine($"Karaj Completed !");
-file.Dispose();
 
+
+
+
+file.Dispose();
+Console.WriteLine("-------------End Task------------");
 Console.ReadKey();
