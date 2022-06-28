@@ -28,8 +28,7 @@
         {
             var allDigitEqual = new[] { "0000000000", "1111111111", "2222222222", "3333333333", "4444444444", "5555555555", "6666666666", "7777777777", "8888888888", "9999999999" };
             if (allDigitEqual.Contains(nationalCode)) return false;
-            //if (!nationalCode.StartsWith("031"))
-            //    return false;
+           
             var chArray = nationalCode.ToCharArray();
             var num0 = Convert.ToInt32(chArray[0].ToString()) * 10;
             var num2 = Convert.ToInt32(chArray[1].ToString()) * 9;

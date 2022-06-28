@@ -4,7 +4,7 @@
   "DataSource": {
     "Type": "TabularFile",
     "Version": 1,
-    "FilePath": "C:\\Users\\Ershad Raoufi\\Desktop\\io.txt",
+    "FilePath": "D:\\IranianNationalCodes\\GenerateIranianNationalCodes\\Data\\Codes.txt",
     "Delimiter": ",",
     "DecimalMarker": ".",
     "HasHeader": true,
@@ -12,7 +12,7 @@
       {
         "ColumnName": "Ncode",
         "ColumnPurpose": "Feature",
-        "ColumnDataFormat": "Single",
+        "ColumnDataFormat": "String",
         "IsCategorical": false,
         "Type": "Column",
         "Version": 1
@@ -39,46 +39,46 @@
         "Version": 0,
         "Type": "Trial",
         "TrainerName": "SdcaMaximumEntropyMulti",
-        "Score": 0.19859059794217174,
-        "RuntimeInSeconds": 0.44499999284744263
+        "Score": 0.25172857914694652,
+        "RuntimeInSeconds": 0.99099999666213989
+      },
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "SdcaLogisticRegressionOva",
+        "Score": 0.25172857914694652,
+        "RuntimeInSeconds": 1.5130000114440918
       },
       {
         "Version": 0,
         "Type": "Trial",
         "TrainerName": "SdcaMaximumEntropyMulti",
-        "Score": 0.19859059794217174,
-        "RuntimeInSeconds": 0.41999998688697815
+        "Score": 0.79933525064028743,
+        "RuntimeInSeconds": 0.99500000476837158
       },
       {
         "Version": 0,
         "Type": "Trial",
         "TrainerName": "SdcaMaximumEntropyMulti",
-        "Score": 0.19859059794217174,
-        "RuntimeInSeconds": 0.41699999570846558
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "FastForestOva",
-        "Score": 0.99402618657937791,
-        "RuntimeInSeconds": 3.1029999256134033
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "FastForestOva",
-        "Score": 0.997872340425532,
-        "RuntimeInSeconds": 2.8859999179840088
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "FastTreeOva",
         "Score": 1.0,
-        "RuntimeInSeconds": 2.7850000858306885
+        "RuntimeInSeconds": 1.0110000371932983
+      },
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "FastForestOva",
+        "Score": 1.0,
+        "RuntimeInSeconds": 3.8829998970031738
+      },
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "LbfgsLogisticRegressionOva",
+        "Score": 1.0,
+        "RuntimeInSeconds": 1.503000020980835
       }
     ],
-    "Pipeline": "[{\"EstimatorType\":\"ReplaceMissingValues\",\"Inputs\":[\"Ncode\"],\"Outputs\":[\"Ncode\"]},{\"EstimatorType\":\"Concatenate\",\"Inputs\":[\"Ncode\"],\"Outputs\":[\"Features\"]},{\"EstimatorType\":\"MapValueToKey\",\"Inputs\":[\"City\"],\"Outputs\":[\"City\"]},{\"LabelColumnName\":\"City\",\"FeatureColumnName\":\"Features\",\"NumberOfTrees\":\"8\",\"FeatureFraction\":\"0.890092538828462\",\"EstimatorType\":\"FastForestOva\",\"Inputs\":[\"City\"],\"Outputs\":[\"Features\"]},{\"EstimatorType\":\"MapKeyToValue\",\"Inputs\":[\"PredictedLabel\"],\"Outputs\":[\"PredictedLabel\"]}]",
+    "Pipeline": "[{\"EstimatorType\":\"FeaturizeText\",\"Inputs\":[\"Ncode\"],\"Outputs\":[\"Ncode\"]},{\"EstimatorType\":\"Concatenate\",\"Inputs\":[\"Ncode\"],\"Outputs\":[\"Features\"]},{\"EstimatorType\":\"MapValueToKey\",\"Inputs\":[\"City\"],\"Outputs\":[\"City\"]},{\"EstimatorType\":\"NormalizeMinMax\",\"Inputs\":[\"Features\"],\"Outputs\":[\"Features\"]},{\"LabelColumnName\":\"City\",\"FeatureColumnName\":\"Features\",\"L1Regularization\":\"0.03125\",\"L2Regularization\":\"0.0686260511458228\",\"EstimatorType\":\"SdcaMaximumEntropyMulti\",\"Inputs\":[\"City\"],\"Outputs\":[\"Features\"]},{\"EstimatorType\":\"MapKeyToValue\",\"Inputs\":[\"PredictedLabel\"],\"Outputs\":[\"PredictedLabel\"]}]",
     "MetricName": "MicroAccuracy"
   },
   "Type": "TrainingConfig",

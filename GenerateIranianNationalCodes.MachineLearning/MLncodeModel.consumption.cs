@@ -16,7 +16,7 @@ namespace GenerateIranianNationalCodes_MachineLearning
         public class ModelInput
         {
             [ColumnName(@"Ncode")]
-            public float Ncode { get; set; }
+            public string Ncode { get; set; }
 
             [ColumnName(@"City")]
             public string City { get; set; }

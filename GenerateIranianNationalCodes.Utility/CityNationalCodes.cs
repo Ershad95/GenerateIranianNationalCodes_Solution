@@ -1,8 +1,8 @@
-﻿
+
 
 namespace GenerateIranianNationalCodes.Utility
 {
-    public static class CityNationalCodes_Tehran
+    public static class CityNationalCodes_تهران
     {
         public static string Tehran_001 { get; } = "001";
         public static string Tehran_002 { get; } = "002";
@@ -13,9 +13,9 @@ namespace GenerateIranianNationalCodes.Utility
         public static string Tehran_007 { get; } = "007";
         public static string Tehran_008 { get; } = "008";
     }
-    public static class CityNationalCodes_Karaj
+    public static class CityNationalCodes_کرج
     {
-        public static string Karaj_031 { get; } = "031";
-        public static string Karaj_032 { get; } = "032";
+        public static string کرج_031 { get; } = "031";
+        public static string کرج_032 { get; } = "032";
     }
 }

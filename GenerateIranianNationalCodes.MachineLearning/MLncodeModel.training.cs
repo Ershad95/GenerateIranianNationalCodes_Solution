@@ -5,7 +5,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.ML.Data;
-using Microsoft.ML.Trainers.FastTree;
 using Microsoft.ML.Trainers;
 using Microsoft.ML;
 
@@ -29,10 +28,11 @@ namespace GenerateIranianNationalCodes_MachineLearning
         public static IEstimator<ITransformer> BuildPipeline(MLContext mlContext)
         {
             // Data process configuration with pipeline data transformations
-            var pipeline = mlContext.Transforms.ReplaceMissingValues(@"Ncode", @"Ncode")      
+            var pipeline = mlContext.Transforms.Text.FeaturizeText(@"Ncode", @"Ncode")      
                                     .Append(mlContext.Transforms.Concatenate(@"Features", @"Ncode"))      
                                     .Append(mlContext.Transforms.Conversion.MapValueToKey(@"City", @"City"))      
-                                    .Append(mlContext.MulticlassClassification.Trainers.OneVersusAll(binaryEstimator:mlContext.BinaryClassification.Trainers.FastForest(new FastForestBinaryTrainer.Options(){NumberOfTrees=8,FeatureFraction=0.890092538828462F,LabelColumnName=@"City",FeatureColumnName=@"Features"}), labelColumnName: @"City"))      
+                                    .Append(mlContext.Transforms.NormalizeMinMax(@"Features", @"Features"))      
+                                    .Append(mlContext.MulticlassClassification.Trainers.SdcaMaximumEntropy(l1Regularization:0.03125F,l2Regularization:0.0686260511458228F,labelColumnName:@"City",featureColumnName:@"Features"))      
                                     .Append(mlContext.Transforms.Conversion.MapKeyToValue(@"PredictedLabel", @"PredictedLabel"));
 
             return pipeline;
