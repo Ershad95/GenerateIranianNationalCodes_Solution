@@ -1,5 +1,5 @@
 ﻿using GenerateIranianNationalCodes.Utility;
-using static Utility;
+using static Util.Utility;
 //---------------3 precodes-------------------
 List<string> Tehran_preCodes = new()
 {

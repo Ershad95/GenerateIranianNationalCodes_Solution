@@ -1,33 +1,42 @@
-﻿public class Utility
+﻿namespace Util
 {
-    public static void AddHeaderToFile(StreamWriter file)
+    public class Utility
     {
-        file.WriteLine("Ncode,City");
-    }
-    public static void PrintAllNCodes(StreamWriter file=null)
-    {
-        long counter = 1;
-        for (long number = 0; number < 9999999999; number++)
+        public static void AddHeaderToFile(StreamWriter file)
         {
-            var ncode = number.ToString();
-            var len = ncode.Length;
-            if (ncode.Length < 10)
-                for (int j = 1; j <= 10 - len; j++)
-                    ncode = "0" + ncode;
-            if (Check(ncode))
+            file.WriteLine("Ncode,City");
+        }
+        public static void PrintAllNCodes(StreamWriter file = null)
+        {
+            long counter = 1;
+            for (long number = 0; number < 9999999999; number++)
             {
-                if(file!=null)
-                    file.WriteLine(ncode);
-                else
-                    Console.WriteLine($"{counter} - {ncode}");
-                ++counter;
+                var ncode = number.ToString();
+                var len = ncode.Length;
+                if (ncode.Length < 10)
+                    for (int j = 1; j <= 10 - len; j++)
+                        ncode = "0" + ncode;
+                if (Check(ncode))
+                {
+                    if (file != null)
+                        file.WriteLine(ncode);
+                    else
+                        Console.WriteLine($"{counter} - {ncode}");
+                    ++counter;
+                }
             }
         }
-    }
         public static bool Check(string nationalCode)
         {
+            if (nationalCode.Length < 10)
+                return false;
+            if (nationalCode.Length > 10)
+                return false;
+            var characters = new[] { "@","/","-","+","&","$","!","^","(",")" };
+            if (characters.Contains(nationalCode)) return false;
             var allDigitEqual = new[] { "0000000000", "1111111111", "2222222222", "3333333333", "4444444444", "5555555555", "6666666666", "7777777777", "8888888888", "9999999999" };
             if (allDigitEqual.Contains(nationalCode)) return false;
+            
            
             var chArray = nationalCode.ToCharArray();
             var num0 = Convert.ToInt32(chArray[0].ToString()) * 10;
@@ -73,3 +82,4 @@
             }
         }
     }
+}

@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenerateIranianNationalCode
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenerateIranianNationalCodes_ML_Detection", "GenerateIranianNationalCodes_ML_Detection\GenerateIranianNationalCodes_ML_Detection.csproj", "{D44103C9-FE98-4476-8FBC-7D3F8CAF8A38}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenerateIranianNationalCodes.Test", "GenerateIranianNationalCodes.Test\GenerateIranianNationalCodes.Test.csproj", "{6E3E5D39-89E7-4941-92E8-EF640C538A4E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{D44103C9-FE98-4476-8FBC-7D3F8CAF8A38}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D44103C9-FE98-4476-8FBC-7D3F8CAF8A38}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D44103C9-FE98-4476-8FBC-7D3F8CAF8A38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E3E5D39-89E7-4941-92E8-EF640C538A4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E3E5D39-89E7-4941-92E8-EF640C538A4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E3E5D39-89E7-4941-92E8-EF640C538A4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E3E5D39-89E7-4941-92E8-EF640C538A4E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
